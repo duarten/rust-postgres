@@ -1243,7 +1243,7 @@ impl Type {
     /// VARBIT&#91;&#93;
     pub const VARBIT_ARRAY: Type = Type(Inner::VarbitArray);
 
-    /// NUMERIC - numeric&#40;precision, decimal&#41;, arbitrary precision number
+    /// NUMERIC - numeric&#40;preiision, decimal&#41;, arbitrary precision number
     pub const NUMERIC: Type = Type(Inner::Numeric);
 
     /// REFCURSOR - reference to cursor &#40;portal name&#41;
@@ -1320,6 +1320,8 @@ impl Type {
 
     /// UUID - UUID datatype
     pub const UUID: Type = Type(Inner::Uuid);
+
+    pub const ULID: Type = Type(Inner::Uuid);
 
     /// UUID&#91;&#93;
     pub const UUID_ARRAY: Type = Type(Inner::UuidArray);

@@ -11,7 +11,7 @@ impl<'a> FromSql<'a> for Uuid {
         Ok(Uuid::from_bytes(bytes))
     }
 
-    accepts!(UUID);
+    accepts!(UUID, ULID);
 }
 
 impl ToSql for Uuid {
@@ -20,6 +20,6 @@ impl ToSql for Uuid {
         Ok(IsNull::No)
     }
 
-    accepts!(UUID);
+    accepts!(UUID, ULID);
     to_sql_checked!();
 }
